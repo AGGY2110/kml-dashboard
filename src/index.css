@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --y: #EE4D2D; --y2: #EE4D2D18; --y3: #EE4D2D30;
+  --o: #FF7337; --o2: #FF733718;
+  --r: #D0011B; --r2: #D0011B18;
+  --g: #00BFA5; --g2: #00BFA518;
+  --b: #1877F2; --b2: #1877F218;
+  --shopee: #EE4D2D;
+
+  --bg0: #F5F5F5;
+  --bg1: #FFFFFF;
+  --bg2: #FFFFFF;
+  --bg3: #FFF5F2;
+  --bg4: #FFE8E0;
+  --bo: #E8E8E8;
+  --bo2: #EE4D2D40;
+  --t1: #212121;
+  --t2: #555555;
+  --t3: #999999;
+
+  --fd: 'Nunito', sans-serif;
+  --fb: 'Nunito Sans', sans-serif;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 24px;
+  --sw: 240px; --hh: 58px;
+  --sh-sm: 0 1px 4px rgba(0,0,0,.08);
+  --sh-md: 0 4px 16px rgba(0,0,0,.1);
+  --sh-lg: 0 8px 32px rgba(0,0,0,.12);
+}
+
+html,body{height:100%}
+body{font-family:var(--fb);background:var(--bg0);color:var(--t1);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#root{height:100%}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px}
+*{scrollbar-width:thin;scrollbar-color:#ddd transparent}
+
+input,select,textarea{
+  font-family:var(--fb);background:#fff;border:1px solid var(--bo);
+  color:var(--t1);border-radius:var(--r-sm);padding:9px 12px;font-size:13px;
+  width:100%;transition:border-color .15s,box-shadow .15s
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;border-color:var(--shopee);box-shadow:0 0 0 3px rgba(238,77,45,.1)
+}
+input::placeholder,textarea::placeholder{color:var(--t3)}
+select option{background:#fff;color:var(--t1)}
+
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:var(--r-sm);font-family:var(--fb);font-size:13px;font-weight:700;cursor:pointer;border:none;transition:all .15s;white-space:nowrap;text-decoration:none}
+.btn-primary{background:var(--shopee);color:#fff}
+.btn-primary:hover{background:#D0411F;box-shadow:0 4px 16px rgba(238,77,45,.3)}
+.btn-secondary{background:#fff;color:var(--t1);border:1px solid var(--bo)}
+.btn-secondary:hover{background:var(--bg3);border-color:var(--shopee)}
+.btn-ghost{background:transparent;color:var(--t2)}
+.btn-ghost:hover{color:var(--t1);background:var(--bg3)}
+.btn-danger{background:var(--r);color:#fff}
+.btn-outline{background:transparent;color:var(--shopee);border:1px solid var(--shopee)}
+.btn-outline:hover{background:var(--y2)}
+
+.card{background:#fff;border:1px solid var(--bo);border-radius:var(--r-lg);padding:20px;box-shadow:var(--sh-sm)}
+.card-sm{background:#fff;border:1px solid var(--bo);border-radius:var(--r-md);padding:14px}
+
+.badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700}
+.b-y{background:#FFF5F2;color:#EE4D2D}
+.b-o{background:#FFF0E8;color:#FF6B35}
+.b-r{background:#FFF0F0;color:#D0011B}
+.b-g{background:#E8FFF8;color:#00A887}
+.b-b{background:#E8F0FF;color:#1877F2}
+
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{padding:10px 12px;color:var(--t3);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--bo);background:#FAFAFA;white-space:nowrap}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--bo);color:var(--t1)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:#FFF5F2}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.fade-up{animation:fadeUp .35s ease forwards}
+.fade-in{animation:fadeIn .3s ease forwards}
+.sec-title{font-family:var(--fd);font-size:15px;font-weight:800;color:var(--t1);letter-spacing:-.01em;margin-bottom:14px}
+
+.plat-tt{background:#F0F0F0;color:#212121;border:1px solid #ddd}
+.plat-sp{background:#FFF5F2;color:#EE4D2D;border:1px solid #EE4D2D30}
+.plat-mt{background:#E8F0FF;color:#1877F2;border:1px solid #1877F230}
